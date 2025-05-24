@@ -31,27 +31,27 @@ defaults write com.apple.controlcenter "NSStatusItem Visible WiFi" -bool "true"
 # Dock
 
 # Put the Dock on the bottom of the screen
-defaults write com.apple.dock "orientation" -string "bottom" && killall Dock
+defaults write com.apple.dock "orientation" -string "bottom"
 
 # Always display the Dock
-defaults write com.apple.dock "autohide" -bool "false" && killall Dock
+defaults write com.apple.dock "autohide" -bool "false"
 
 # Do not show recently used apps in a separate section of the Dock
-defaults write com.apple.dock "show-recents" -bool "false" && killall Dock
+defaults write com.apple.dock "show-recents" -bool "false"
 
 # Finder
 
 # Show hidden files
-defaults write com.apple.finder "AppleShowAllFiles" -bool "true" && killall Finder
+defaults write com.apple.finder "AppleShowAllFiles" -bool "true"
 
 # Show filename extensions
-defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" && killall Finder
+defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
 
 # Set default view style to "Columns"
-defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv" && killall Finder
+defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv"
 
 # Empty bin after 30 days
-defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true" && killall Finder
+defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
 
 # Fn/🌐 key usage
 
@@ -61,12 +61,38 @@ defaults write com.apple.HIToolbox AppleFnUsageType -int "2"
 # Mission Control
 
 # Group windows by application
-defaults write com.apple.dock "expose-group-apps" -bool "true" && killall Dock
+defaults write com.apple.dock "expose-group-apps" -bool "true"
+
+# Spotlight
+
+# Set Spotlight search categories
+defaults write com.apple.Spotlight "orderedItems" -array \
+	'{"enabled" = 1;"name" = "APPLICATIONS";}' \
+	'{"enabled" = 1;"name" = "MENU_EXPRESSION";}' \
+	'{"enabled" = 1;"name" = "CONTACT";}' \
+	'{"enabled" = 1;"name" = "MENU_CONVERSION";}' \
+	'{"enabled" = 1;"name" = "MENU_DEFINITION";}' \
+	'{"enabled" = 1;"name" = "DOCUMENTS";}' \
+	'{"enabled" = 0;"name" = "EVENT_TODO";}' \
+	'{"enabled" = 1;"name" = "DIRECTORIES";}' \
+	'{"enabled" = 0;"name" = "FONTS";}' \
+	'{"enabled" = 0;"name" = "IMAGES";}' \
+	'{"enabled" = 0;"name" = "MESSAGES";}' \
+	'{"enabled" = 0;"name" = "MOVIES";}' \
+	'{"enabled" = 0;"name" = "MUSIC";}' \
+	'{"enabled" = 1;"name" = "MENU_OTHER";}' \
+	'{"enabled" = 1;"name" = "PDF";}' \
+	'{"enabled" = 1;"name" = "PRESENTATIONS";}' \
+	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}' \
+	'{"enabled" = 1;"name" = "SPREADSHEETS";}' \
+	'{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
+	'{"enabled" = 0;"name" = "TIPS";}' \
+	'{"enabled" = 0;"name" = "BOOKMARKS";}'
 
 # Text Edit
 
 # Disable rich text
-defaults write com.apple.TextEdit "RichText" -bool "false" && killall TextEdit
+defaults write com.apple.TextEdit "RichText" -bool "false"
 
 # Disable smart quotes
-defaults write com.apple.TextEdit "SmartQuotes" -bool "false" && killall TextEdit
+defaults write com.apple.TextEdit "SmartQuotes" -bool "false"
