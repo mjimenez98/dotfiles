@@ -9,3 +9,6 @@ git config --global pull.rebase false
 
 # Convert CRLF to LF on commit
 git config --global core.autocrlf input
+
+# Set VSCode as default editor
+git config --global core.editor "code --wait"
