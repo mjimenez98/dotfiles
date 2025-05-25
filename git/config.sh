@@ -12,3 +12,12 @@ git config --global core.autocrlf input
 
 # Set VSCode as default editor
 git config --global core.editor "code --wait"
+
+# Automatically set up remote tracking branches
+git config --global push.autoSetupRemote true
+
+# Set default branch name to main
+git config --global init.defaultBranch main
+
+# Delete branches that have been merged
+git config --global alias.clean-up-branches '!git branch -vv | grep ": gone]" | grep -v "\*" | awk "{ print \$1 }" | xargs git branch -d '
