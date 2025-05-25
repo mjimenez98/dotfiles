@@ -1,3 +1,3 @@
 # dotfiles
 
-@mjimenez98's dotfiles ✌️
+My personal configuration files.
