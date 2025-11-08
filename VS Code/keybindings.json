@@ -9,13 +9,17 @@
     "command": "workbench.action.tasks.reRunTask"
   },
   {
+    "key": "shift+cmd+/",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
     "key": "shift+cmd+b",
     "command": "-workbench.action.tasks.build",
     "when": "taskCommandsRegistered"
   },
   {
-    "key": "shift+cmd+/",
-    "command": "workbench.action.terminal.new",
-    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    "key": "shift+cmd+b",
+    "command": "workbench.action.tasks.runTask"
   }
 ]
