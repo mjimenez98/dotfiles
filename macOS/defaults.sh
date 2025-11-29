@@ -53,6 +53,12 @@ defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv"
 # Empty bin after 30 days
 defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
 
+# Show Path Bar
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+
+# Show Status Bar
+defaults write com.apple.finder "ShowStatusBar" -bool "true"
+
 # Fn/🌐 key usage
 
 # Set to Show Emoji & Symbols
