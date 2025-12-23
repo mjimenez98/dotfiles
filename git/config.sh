@@ -20,4 +20,4 @@ git config --global push.autoSetupRemote true
 git config --global init.defaultBranch main
 
 # Delete branches that have been merged
-git config --global alias.clean-up-branches '!git branch -vv | grep ": gone]" | grep -v "\*" | awk "{ print \$1 }" | xargs git branch -d '
+git config --global alias.clean-up-branches '!git branch | grep -v "main" | xargs git branch -d'
